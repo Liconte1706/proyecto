@@ -1,0 +1,15 @@
+@keyframes in-circle-swoop {
+    from {
+        clip-path: var(--circle-top-right-out);
+    }
+    to {
+        clip-path: var(--circle-bottom-right-in);
+    }
+}
+
+body[transition-style="in:custom:circle-swoop"] {
+    --transition__duration: 5s;
+    animation-name: in-circle-swoop;
+    animation-duration: var(--transition__duration);
+    animation-fill-mode: both;
+}
